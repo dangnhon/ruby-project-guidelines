@@ -1,4 +1,4 @@
 class Artist < ActiveRecord::Base
-    has_many :dates_played
-    has_many :venues, through: :dates_played
+    has_many :show_dates
+    has_many :venues, through: :show_dates
 end 

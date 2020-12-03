@@ -10,23 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_03_003630) do
+ActiveRecord::Schema.define(version: 2020_12_03_174901) do
 
   create_table "artists", force: :cascade do |t|
     t.string "name"
   end
 
-  create_table "dates_played", force: :cascade do |t|
+  create_table "show_dates", force: :cascade do |t|
     t.datetime "date"
-    t.integer "location_id"
+    t.integer "venue_id"
     t.integer "artist_id"
   end
 
-  create_table "venue", force: :cascade do |t|
+  create_table "venues", force: :cascade do |t|
     t.string "name"
     t.string "city"
     t.string "state"
-    t.integer "date_played_id"
   end
 
 end
